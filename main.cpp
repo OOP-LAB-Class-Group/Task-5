@@ -1,3 +1,9 @@
+// 2018556502 Muhammed Ali ARICI
+// 2019556461 Mahmut Can ÇINGI
+// 2020556061 Emre ULUSOY
+
+/* Multiple inheritence occurs ambigious error. To solve this, we should use scope resolution operator (::) or virtual base class */
+
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
@@ -8,11 +14,12 @@ class people {
   char name[20];
 };
 
-class staff : public people {
+class staff : virtual public people {
+ public:
   int i = 3;
 };
 
-class manager : public people {
+class manager : virtual public people {
  public:
   int j = 8;
 };
